@@ -32,6 +32,7 @@ class QuadTree:
         return f"Quad Tree :{quadrant_str("Top Left:", self.quadrants[1])}{quadrant_str("Top Right:", self.quadrants[2])}{quadrant_str("Bottom Right:", self.quadrants[3])}{quadrant_str("Bottom Left:", self.quadrants[4])}\n"
 
     def fullInfo(self) -> str:
+        """Detailed information about the quadtree"""
         return f"QuadTree Infos : \nList Representation {self.list_rep} \nDepth = {self.depth} \nValues = {self}"
 
     @property
@@ -41,6 +42,7 @@ class QuadTree:
 
     @depth.setter
     def depth(self, value: int):
+        """Set Depth of the Quadtree"""
         self._depth = value
 
     def find_depth(self):
@@ -159,6 +161,7 @@ class TkQuadTree(QuadTree):
         root.mainloop()
 
     def drawQuadTree(self, x_start: int, y_start: int, size: int):
+        """Logic to draw the Quadtree on the canvas"""
         quadrants = self.quadtree.quadrants
         half_size = size // 2
 

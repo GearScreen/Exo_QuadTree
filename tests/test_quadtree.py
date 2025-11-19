@@ -18,6 +18,7 @@ def test_single():
 
 
 def test_custom():
+    """Custom test between sample and single"""
     quadTree = QuadTree.fromString("[[0,1,0,0],0,0,0]")
     # quadTree = QuadTree.fromString("[1,0,1,0]")
     # print(quadTree)
@@ -27,12 +28,14 @@ def test_custom():
 
 
 def test_Tk():
+    """Test Quadtree Tk Draw from File"""
     filename = "files/quadtree.txt"
     q = QuadTree.fromFile(filename)
     TkQuadTree(q).paint()
 
 
 def test_draw_start(quadTree_drawer):
+    """First Draw Test"""
     quadTree_drawer.drawCell(500, 500, 50)
     quadTree_drawer.drawCell(0, 0, 50)
     quadTree_drawer.drawCell(50, 0, 50, "red")
@@ -40,6 +43,7 @@ def test_draw_start(quadTree_drawer):
 
 
 def test_draw(quadTree_drawer):
+    """Draw Test for Quatree"""
     # Draw Cells
     quadTree_drawer.drawCell(0, 0, 200)
 
